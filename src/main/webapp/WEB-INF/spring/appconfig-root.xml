@@ -7,7 +7,12 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <import resource="classpath:META-INF/spring/app-data.xml"/>
+
+    <import resource="classpath:META-INF/spring/app-security.xml"/>
 
     <context:component-scan base-package="com.bambuk.delivery.*"/>
+
+    <context:property-placeholder location="classpath:META-INF/sql/database.properties"/>
 
 </beans>
