@@ -28,8 +28,6 @@ public class MyController {
     private UserValidator userValidator;
 
 
-
-
     private final Logger logger = LoggerFactory.getLogger(MyController.class);
 
     @RequestMapping(value = "/registration", method = RequestMethod.GET)
