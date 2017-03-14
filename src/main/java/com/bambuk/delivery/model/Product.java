@@ -25,6 +25,8 @@ public class Product {
     @Column(name = "photo")
     private String photo;
 
+    public Product() {
+    }
 
     public Long getId() {
         return id;

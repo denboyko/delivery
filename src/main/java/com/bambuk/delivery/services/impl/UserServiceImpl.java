@@ -1,9 +1,10 @@
-package com.bambuk.delivery.services;
+package com.bambuk.delivery.services.impl;
 
 import com.bambuk.delivery.dao.RoleDao;
 import com.bambuk.delivery.dao.UserDao;
 import com.bambuk.delivery.model.Role;
 import com.bambuk.delivery.model.User;
+import com.bambuk.delivery.services.UserService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;

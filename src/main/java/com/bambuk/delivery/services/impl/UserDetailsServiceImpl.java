@@ -1,4 +1,4 @@
-package com.bambuk.delivery.services;
+package com.bambuk.delivery.services.impl;
 
 import com.bambuk.delivery.dao.UserDao;
 import com.bambuk.delivery.model.Role;
