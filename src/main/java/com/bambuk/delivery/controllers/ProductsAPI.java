@@ -22,7 +22,7 @@ public class ProductsAPI {
         return product;
     }
 
-    @RequestMapping(value = "",  method = RequestMethod.GET)
+    @RequestMapping(value = "/all",  method = RequestMethod.GET)
     public List<Product> getAllProducts( ) {
 
         List<Product> productList = productService.getAll();
