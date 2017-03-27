@@ -9,36 +9,37 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-public class RestAPI {
+@RequestMapping(value = "/products")
+public class ProductsAPI {
 
     @Autowired
     private ProductService productService;
 
-    @RequestMapping(value = "/products/{productName}",  method = RequestMethod.GET)
+    @RequestMapping(value = "/{productName}",  method = RequestMethod.GET)
     public Product getProductById(@PathVariable String productName) {
 
         Product product = productService.findByName(productName);
         return product;
     }
 
-    @RequestMapping(value = "/products",  method = RequestMethod.GET)
+    @RequestMapping(value = "",  method = RequestMethod.GET)
     public List<Product> getAllProducts( ) {
 
         List<Product> productList = productService.getAll();
         return productList;
     }
 
-    @RequestMapping(value = "/products/edit",  method = RequestMethod.POST)
+    @RequestMapping(value = "/edit",  method = RequestMethod.POST)
     public void editProduct(@ModelAttribute Product product) {
         productService.editProduct(product);
     }
 
-    @RequestMapping(value = "/products/add",  method = RequestMethod.POST)
+    @RequestMapping(value = "/add",  method = RequestMethod.POST)
     public void addProduct(@ModelAttribute Product product) {
         productService.addProduct(product);
     }
 
-    @RequestMapping(value = "/products/{id}/delete",  method = RequestMethod.DELETE)
+    @RequestMapping(value = "/{id}/delete",  method = RequestMethod.DELETE)
     public void editProduct(@PathVariable long id) {
         productService.deleteProduct(id);
     }

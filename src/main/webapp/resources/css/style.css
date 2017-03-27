@@ -1,0 +1,68 @@
+.jumbotron{
+  background-image: url("/resources/images/back.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+#introduction{
+  /*color: #FFFFFF;*/
+
+}
+#forintroduction{
+  background-color:#e9d4b3; /*#c1bfea;*/
+   opacity: 0.8;
+}
+#imgmenu{
+  border-radius: 100%;
+}
+a.btn {
+	background: linear-gradient(45deg, rgba(255,184,115,0.65) 0%,rgba(255,124,189,0.65) 50%,rgba(108,0,153,0.65) 100%);
+	border-radius: 50px;
+	box-shadow: 0px 2px 4px rgba(34,62,66,.25);
+  color: #fff;
+  font-size: 10px;
+  letter-spacing: 1px;
+  padding: 16px 32px;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: box-shadow 1s ease;
+	transition: box-shadow 1s ease;
+}
+
+a.btn:hover {
+	box-shadow: 0px 4px 4px rgba(34,62,66,.5);
+	-webkit-transition: box-shadow 1s ease;
+	transition: box-shadow 1s ease;
+}
+#order{
+  background: linear-gradient(45deg, rgba(55,984,15,0.65) 0%,rgba(0,924,0,0.65) 50%,rgba(108,999,153,0.65) 100%);
+  font-family: 'Amatic SC', cursive;
+}
+
+#search{
+  border-radius: 50px;
+}
+
+/* Popover Header */
+/*.popover-title {
+    background-color: #73AD21;
+
+    font-size: 28px;
+    text-align:center;
+}*/
+/* Popover Body */
+/*.popover-content {
+    background-color: coral;
+    color: #FFFFFF;
+    padding: 25px;
+}*/
+#alpino{
+  background-color:rgba(108,999,153,0.65); /*#c1bfea;*/
+   opacity: 0.8;
+    /*color: rgba(55,984,15,0.65);*/
+    color:#FFF;
+    font-family: 'Amatic SC', cursive;
+    font-size: 70px;
+    text-align:center;
+
+
+}
