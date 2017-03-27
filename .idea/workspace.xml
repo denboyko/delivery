@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41cad147-a218-498e-b0dc-c266f8c81316" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/images/Pizza.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/images/alpino.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/images/back.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/images/dimagro.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/images/jarjino.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/bambuk/delivery/controllers/OrderAPI.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/bambuk/delivery/controllers/UsersAPI.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/screen.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/angular.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/mainpage.css" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bambuk/delivery/controllers/MyController.java" afterPath="$PROJECT_DIR$/src/main/java/com/bambuk/delivery/controllers/MyController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/spring/app-security.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/spring/app-security.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/bambuk/delivery/controllers/RestAPI.java" afterPath="$PROJECT_DIR$/src/main/java/com/bambuk/delivery/controllers/ProductsAPI.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -76,7 +60,7 @@
       <file leaf-file-name="UsersAPI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bambuk/delivery/controllers/UsersAPI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="633">
+            <state relative-caret-position="689">
               <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -1315,7 +1299,7 @@
       <workItem from="1488722961407" duration="7413000" />
       <workItem from="1489341120949" duration="36590000" />
       <workItem from="1490296180707" duration="715000" />
-      <workItem from="1490446832946" duration="11590000" />
+      <workItem from="1490446832946" duration="11720000" />
     </task>
     <task id="LOCAL-00001" summary="new controller">
       <created>1488386973190</created>
@@ -1352,11 +1336,18 @@
       <option name="project" value="LOCAL" />
       <updated>1489532268343</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Product API, Some front-end">
+      <created>1490645012153</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1490645012153</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71951000" />
+    <option name="totallyTimeSpent" value="72081000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1455,7 +1446,8 @@
     <MESSAGE value="bug fixes" />
     <MESSAGE value="rest api" />
     <MESSAGE value="new rest methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="new rest methods" />
+    <MESSAGE value="Product API, Some front-end" />
+    <option name="LAST_COMMIT_MESSAGE" value="Product API, Some front-end" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1988,7 +1980,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bambuk/delivery/controllers/UsersAPI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="633">
+        <state relative-caret-position="689">
           <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
