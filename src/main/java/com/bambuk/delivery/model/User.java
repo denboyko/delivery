@@ -1,5 +1,7 @@
 package com.bambuk.delivery.model;
 
+import org.springframework.web.bind.annotation.ModelAttribute;
+
 import javax.persistence.*;
 import java.util.Set;
 
@@ -29,6 +31,9 @@ public class User {
     public User() {
     }
 
+    public User getUser(){
+        return new User();
+    }
     public Long getId() {
         return id;
     }

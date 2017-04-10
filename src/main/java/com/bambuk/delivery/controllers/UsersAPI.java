@@ -6,15 +6,18 @@ import com.bambuk.delivery.services.SecurityService;
 import com.bambuk.delivery.services.UserService;
 import com.bambuk.delivery.validator.UserValidator;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author Den Boyko
  * @version 1.0
  */
+@RestController
 public class UsersAPI {
 
     @Autowired
@@ -27,7 +30,7 @@ public class UsersAPI {
     private SecurityService securityService;
 
     @RequestMapping(value = "/registration",  method = RequestMethod.POST)
-    public User registration(@ModelAttribute User user, BindingResult bindingResult) {
+    public User registration(@ModelAttribute("user") User user, BindingResult bindingResult) {
 
         userValidator.validate(user, bindingResult);
 
