@@ -6,6 +6,7 @@ import com.bambuk.delivery.services.UserService;
 import com.bambuk.delivery.validator.UserValidator;
 import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
  * @author Den Boyko
  * @version 1.0
  */
-@RestController
+@Controller
 public class UsersAPI {
 
     @Autowired
@@ -26,12 +27,11 @@ public class UsersAPI {
     private SecurityService securityService;
 
     @RequestMapping(value = "/registration",  method = RequestMethod.POST)
-    public User registration(@RequestBody String string, BindingResult bindingResult) {
+    public User registration(@RequestBody String string) {
 
         Gson gson = new Gson();
         User user = gson.fromJson(string, User.class);
 
-        userValidator.validate(user, bindingResult);
 
 //        if (bindingResult.hasErrors()) {
 //        return bindingResult;
