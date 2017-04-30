@@ -23,16 +23,21 @@ public class UsersAPI {
     @Autowired
     private UserService userService;
 
-    @Autowired
-    private UserValidator userValidator;
 
     @Autowired
     private SecurityService securityService;
 
     @RequestMapping(value = "/registration",  method = RequestMethod.POST)
-    public User registration(@RequestBody User user) {
+    public User registration(@RequestBody String string) {
 
 
+        ObjectMapper objectMapper = new ObjectMapper();
+        User user = null;
+        try {
+            user = objectMapper.readValue(string, User.class);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 //        if (bindingResult.hasErrors()) {
 //        return bindingResult;
 //        }
@@ -46,9 +51,13 @@ public class UsersAPI {
     @RequestMapping(value = "/login",  method = RequestMethod.POST)
     public User login(@RequestBody String string) {
 
-        Gson gson = new Gson();
-        User user = gson.fromJson(string, User.class);
-
+        ObjectMapper objectMapper = new ObjectMapper();
+        User user = null;
+        try {
+            user = objectMapper.readValue(string, User.class);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         securityService.autoLogin(user.getUsername(), user.getPassword());
 
         return user;
