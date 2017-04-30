@@ -4,17 +4,20 @@ import com.bambuk.delivery.model.User;
 import com.bambuk.delivery.services.SecurityService;
 import com.bambuk.delivery.services.UserService;
 import com.bambuk.delivery.validator.UserValidator;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+
+import java.io.IOException;
 
 /**
  * @author Den Boyko
  * @version 1.0
  */
-@Controller
+
+@RestController
 public class UsersAPI {
 
     @Autowired
@@ -27,10 +30,7 @@ public class UsersAPI {
     private SecurityService securityService;
 
     @RequestMapping(value = "/registration",  method = RequestMethod.POST)
-    public User registration(@RequestBody String string) {
-
-        Gson gson = new Gson();
-        User user = gson.fromJson(string, User.class);
+    public User registration(@RequestBody User user) {
 
 
 //        if (bindingResult.hasErrors()) {
@@ -38,7 +38,7 @@ public class UsersAPI {
 //        }
 
         userService.save(user);
-        securityService.autoLogin(user.getUsername(), user.getConfirmPassword());
+        securityService.autoLogin(user.getUsername(), user.getPassword());
 
         return user;
     }
@@ -49,7 +49,7 @@ public class UsersAPI {
         Gson gson = new Gson();
         User user = gson.fromJson(string, User.class);
 
-        securityService.autoLogin(user.getUsername(), user.getConfirmPassword());
+        securityService.autoLogin(user.getUsername(), user.getPassword());
 
         return user;
     }

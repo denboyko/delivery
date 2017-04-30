@@ -1,5 +1,6 @@
 package com.bambuk.delivery.model;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
 import javax.persistence.*;
@@ -8,6 +9,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "users")
+@JsonInclude(JsonInclude.Include.NON_DEFAULT)
 public class User {
 
     @Id
@@ -19,9 +21,6 @@ public class User {
 
     @Column(name = "password")
     private String password;
-
-    @Transient
-    private String confirmPassword;
 
     @ManyToMany
     @JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"),
@@ -56,14 +55,6 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public String getConfirmPassword() {
-        return confirmPassword;
-    }
-
-    public void setConfirmPassword(String confirmPassword) {
-        this.confirmPassword = confirmPassword;
     }
 
     public Set<Role> getRoles() {
