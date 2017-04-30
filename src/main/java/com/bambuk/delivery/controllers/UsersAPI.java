@@ -1,17 +1,13 @@
 package com.bambuk.delivery.controllers;
 
-import com.bambuk.delivery.model.Product;
 import com.bambuk.delivery.model.User;
 import com.bambuk.delivery.services.SecurityService;
 import com.bambuk.delivery.services.UserService;
 import com.bambuk.delivery.validator.UserValidator;
+import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author Den Boyko
@@ -30,7 +26,10 @@ public class UsersAPI {
     private SecurityService securityService;
 
     @RequestMapping(value = "/registration",  method = RequestMethod.POST)
-    public User registration(@ModelAttribute("user") User user, BindingResult bindingResult) {
+    public User registration(@RequestBody String string, BindingResult bindingResult) {
+
+        Gson gson = new Gson();
+        User user = gson.fromJson(string, User.class);
 
         userValidator.validate(user, bindingResult);
 
@@ -45,7 +44,10 @@ public class UsersAPI {
     }
 
     @RequestMapping(value = "/login",  method = RequestMethod.POST)
-    public User login(@ModelAttribute User user, BindingResult bindingResult) {
+    public User login(@RequestBody String string) {
+
+        Gson gson = new Gson();
+        User user = gson.fromJson(string, User.class);
 
         securityService.autoLogin(user.getUsername(), user.getConfirmPassword());
 
