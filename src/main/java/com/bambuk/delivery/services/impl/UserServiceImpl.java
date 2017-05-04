@@ -23,8 +23,6 @@ import java.util.Set;
 @Service
 public class UserServiceImpl implements UserService {
 
-    private static final Logger logger = Logger.getLogger(UserServiceImpl.class);
-
     @Autowired
     private UserDao userDao;
 
@@ -40,7 +38,6 @@ public class UserServiceImpl implements UserService {
         Set<Role> roles = new HashSet<>();
         roles.add(roleDao.getOne(1L));
         user.setRoles(roles);
-        logger.info("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
         userDao.save(user);
     }
 

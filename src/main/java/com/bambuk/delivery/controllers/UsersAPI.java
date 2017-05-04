@@ -38,13 +38,10 @@ public class UsersAPI {
         } catch (IOException e) {
             e.printStackTrace();
         }
-//        if (bindingResult.hasErrors()) {
-//        return bindingResult;
-//        }
-
-        userService.save(user);
+        if(userService.findByUsername(user.getUsername())==null) {
+            userService.save(user);
+        }
         securityService.autoLogin(user.getUsername(), user.getPassword());
-
         return user;
     }
 
