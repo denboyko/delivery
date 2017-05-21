@@ -16,6 +16,17 @@ public class Product {
     @Column(name = "name")
     private String name;
 
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    @Column(name = "type")
+    private String type;
+
     @Column(name = "price")
     private int price;
 

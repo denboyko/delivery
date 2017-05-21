@@ -42,6 +42,7 @@ CREATE TABLE products (
   name        VARCHAR(255)  NOT NULL,
   price       INT           NOT NULL,
   description VARCHAR(1000) NOT NULL,
+  type VARCHAR(100) NOT NULL,
   photo       VARCHAR(255)  NOT NULL
 
 )
